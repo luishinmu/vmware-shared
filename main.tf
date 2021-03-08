@@ -178,13 +178,13 @@ resource "vcd_vapp" "vmware_tutorial_vapp2" {
 
 # Connect org Network to vcpApp
 resource "vcd_vapp_org_network" "tutorial_network" {
-  vapp_name        = vcd_vapp.vmware_tutorial_vapp.name
+  vapp_name        = vcd_vapp.vmware_tutorial_vapp2.name
   org_network_name = vcd_network_routed.tutorial_network.name
 }
 
 # Create VM
 resource "vcd_vapp_vm" "vm_1" {
-  vapp_name     = vcd_vapp.vmware_tutorial_vapp.name
+  vapp_name     = vcd_vapp.vmware_tutorial_vapp2.name
   name          = "vm-centos8-10"
   catalog_name  = "Public Catalog"
   template_name = "CentOS-8-Template-Official"
@@ -209,7 +209,7 @@ resource "vcd_vapp_vm" "vm_1" {
 
 # Create VM01
 resource "vcd_vapp_vm" "vm_2" {
-  vapp_name     = vcd_vapp.vmware_tutorial_vapp.name
+  vapp_name     = vcd_vapp.vmware_tutorial_vapp2.name
   name          = "vm-windows-10"
   catalog_name  = "Public Catalog"
   template_name = "Windows-2019-Template-Official"
