@@ -32,3 +32,8 @@ variable "allow_ssh" {
   description = "Set to false to not configure SSH into the VM."
   default = true
 }
+
+variable "allow_rdp" {
+  description = "Set to false to not configure RDP into the VM."
+  default = true
+}
