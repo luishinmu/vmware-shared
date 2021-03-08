@@ -17,7 +17,7 @@ module ibm_vmware_solutions_shared_instance {
 # Create a routed network
 resource "vcd_network_routed" "tutorial_network" {
 
-  name         = "Tutorial-Network"
+  name         = "Tutorial-Network2"
   edge_gateway = module.ibm_vmware_solutions_shared_instance.edge_gateway_name
   gateway      = "192.168.100.1"
 
